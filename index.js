@@ -39,7 +39,7 @@ module.exports = {
       production: 'vendor/highlightjs/highlight.pack.min.js',
     });
 
-    app.import("vendor/highlightjs-shim.js");
+    app.import("vendor/highlightjs/shim.js");
 
   }
 };

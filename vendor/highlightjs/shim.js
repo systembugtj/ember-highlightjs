@@ -9,5 +9,5 @@
     });
   }
 
-  generateModule('hightlightjs', { 'default': hljs });
+  generateModule('highlightjs', { 'default': hljs });
 })();
