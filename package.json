@@ -1,24 +1,33 @@
 {
   "name": "ember-highlightjs",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "shim for highlightjs.",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "Albert Li",
+    "email": "albert_lee@hotmail.com",
+    "url": "https://github.com/systembugtj/ember-highlightjs"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systembugtj/ember-highlightjs"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.3.0"
+    "ember-cli-babel": "^6.3.0",
+    "fastboot-transform": "^0.1.2",
+    "highlightjs": "^9.10.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
