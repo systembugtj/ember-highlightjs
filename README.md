@@ -1,6 +1,11 @@
 # ember-highlightjs
 
-This README outlines the details of collaborating on this Ember addon.
+0.1.2
+* use npm highlightjs package.
+* ES import
+```javascript
+import highlightjs from "hightlightjs"
+```
 
 ## Installation
 
