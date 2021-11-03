@@ -1,31 +1,34 @@
 # ember-highlightjs
 
 0.1.2
-* use npm highlightjs package.
-* ES import
+
+- use npm highlightjs package.
+- ES import
+
 ```javascript
-import highlightjs from "hightlightjs"
+import highlightjs from 'hightlightjs';
 ```
+
+## Compatibility
+
+- Ember.js v3.20 or above
+- Ember CLI v3.20 or above
+- Node.js v12 or above
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-highlightjs`
-* `npm install`
+```shell
+ember install ember-highlightjs
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+[Longer description of how to use the addon in apps.]
 
-## Running Tests
+## Contributing
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-## Building
+## License
 
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+This project is licensed under the [MIT License](LICENSE.md).

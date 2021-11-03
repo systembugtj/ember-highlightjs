@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 var path = require('path');
 var Funnel = require('broccoli-funnel');
@@ -7,18 +6,19 @@ var BroccoliDebug = require('broccoli-debug');
 var fbTransform = require('fastboot-transform');
 
 module.exports = {
-  name: 'ember-highlightjs',
+  name: require('./package').name,
 
-  treeForVendor: function(vendorTree) {
+  treeForVendor: function (vendorTree) {
     var highlightjsDir = path.dirname(require.resolve('highlightjs'));
 
     var highlightjsTree = new Funnel(highlightjsDir, {
-      files: ["highlight.pack.js", "highlight.pack.min.js"],
-      destDir: "highlightjs"
+      files: ['highlight.pack.js', 'highlight.pack.min.js'],
+      destDir: 'highlightjs',
     });
 
     highlightjsTree = new BroccoliDebug(
-      highlightjsTree, 'ember-highlightjs:highlightjs-tree'
+      highlightjsTree,
+      'ember-highlightjs:highlightjs-tree'
     );
 
     if (vendorTree) {
@@ -28,18 +28,18 @@ module.exports = {
     }
 
     return new BroccoliDebug(
-      fbTransform(vendorTree), 'ember-highlightjs:vendor-tree'
+      fbTransform(vendorTree),
+      'ember-highlightjs:vendor-tree'
     );
   },
 
-  included: function(app) {
+  included: function (app) {
     this._super.included(app);
     app.import({
       development: 'vendor/highlightjs/highlight.pack.js',
       production: 'vendor/highlightjs/highlight.pack.min.js',
     });
 
-    app.import("vendor/highlightjs/shim.js");
-
-  }
+    app.import('vendor/highlightjs/shim.js');
+  },
 };
